@@ -19,16 +19,16 @@ function CHECK()
         REACTOR_SHUTDOWN()
         return 0
    
-    elseif(FISSION_REACTOR.getTemperature()>=900)
+    elseif (FISSION_REACTOR.getTemperature()>=900)then
         rs.setOutput("left",true)
         REACTOR_SHUTDOWN()
         return 0
     
-    elseif(FISSION_REACTOR.getHeatedCoolantFilledPercentage() > 0.9)
+    elseif (FISSION_REACTOR.getHeatedCoolantFilledPercentage() > 0.9) then
         REACTOR_SHUTDOWN()
         return 0
     
-    elseif(FISSION_REACTOR.getWasteFilledPercentage()>=0.9)
+    elseif (FISSION_REACTOR.getWasteFilledPercentage()>=0.9) then
         rs.setOutput("top",true)
         REACTOR_SHUTDOWN()
         return 0
