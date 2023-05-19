@@ -1,4 +1,6 @@
-local reactor = peripheral.wrap("fissionReactorLogicAdapter_1")
+--print("Type in which number your FissionReactorLogicAdapter got:");
+--local adapter = 
+local reactor = peripheral.wrap("fissionReactorLogicAdapter_0")
 local reactorStatus = true ;
 local function activateReactor(status)
     if status and not reactor.getStatus() then
