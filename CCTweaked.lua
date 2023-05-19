@@ -3,8 +3,7 @@ local reactorStatus = true ;
 local function activateReactor(status)
     if status and not reactor.getStatus() then
             reactor.activate();
-    end
-    else if not status then
+    elseif not status then
         reactor.scram();
     end
     
