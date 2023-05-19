@@ -1,11 +1,10 @@
 local reactor = peripheral.wrap("fissionReactorLogicAdapter_1")
 local reactorStatus = true ;
 local function activateReactor(status)
-    if status then
-        if !reactor.getStatus() then
+    if status and !reactor.getStatus() then
             reactor.activate();
-         end
-    else
+    end
+    else if !status then
         reactor.scram();
     end
     
